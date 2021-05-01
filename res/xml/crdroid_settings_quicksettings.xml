@@ -247,7 +247,7 @@
             android:summary="@string/qs_clock_summary"
             android:defaultValue="true" />
 
-        <!-- QS Brightness Slider position -->
+        <!-- QS Brightness Slider visibility -->
         <lineageos.preference.LineageSecureSettingListPreference
             android:key="qs_show_brightness_slider"
             android:icon="@drawable/ic_brightness"
@@ -256,6 +256,7 @@
             android:entryValues="@array/qs_brightness_slider_show_values"
             android:defaultValue="1" />
 
+        <!-- QS Brightness Slider Auto button visibility -->
         <lineageos.preference.LineageSecureSettingSwitchPreference
             android:key="qs_show_auto_brightness"
             android:icon="@drawable/ic_brightness_auto"
@@ -263,6 +264,14 @@
             android:summary="@string/brightness_icon_summary"
             lineage:requiresConfig="@*android:bool/config_automatic_brightness_available"
             android:defaultValue="true" />
+
+        <!-- QS Brightness Slider position -->
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:key="qs_brightness_position_bottom"
+            android:icon="@drawable/ic_brightness"
+            android:title="@string/qs_brightness_position_bottom_title"
+            android:summary="@string/qs_brightness_position_bottom_summary"
+            android:defaultValue="false" />
 
         <!-- OOS style material dismiss all button for notifications -->
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
