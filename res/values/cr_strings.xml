@@ -851,6 +851,16 @@
     <string name="udfps_recog_animation_effect_title">UDFPS custom animation</string>
     <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
 
+    <!-- UDFPS pressed color -->
+    <string name="udfps_pressed_color_title">UDFPS pressed color</string>
+    <string name="udfps_pressed_color_summary">Choose the best color for your device</string>
+    <string name="udfps_pressed_color_default">Device default</string>
+    <string name="udfps_pressed_color_white">White</string>
+    <string name="udfps_pressed_color_cyan">Cyan</string>
+    <string name="udfps_pressed_color_green">Green</string>
+    <string name="udfps_pressed_color_yellow">Yellow</string>
+    <string name="udfps_pressed_color_light_yellow">Light Yellow</string>
+
     <!-- Face Unlock -->
     <string name="security_settings_face_unlock_redo_face_scan_summary">Remove existing face scan and create a new scan</string>
     <string name="security_settings_face_unlock_redo_face_scan_title">Redo face scan</string>

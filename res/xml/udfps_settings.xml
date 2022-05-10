@@ -39,4 +39,12 @@
         android:summary="@string/screen_off_udfps_summary"
         android:defaultValue="false" />
 
+    <!-- UDFPS Color Picker -->
+    <com.crdroid.settings.preferences.SystemSettingListPreference
+        android:key="udfps_color"
+        android:title="@string/udfps_pressed_color_title"
+        android:summary="@string/udfps_pressed_color_summary"
+        android:entries="@array/udfps_pressed_color_entries"
+        android:entryValues="@array/udfps_pressed_color_values"
+        android:defaultValue="0" />
 </PreferenceScreen>
