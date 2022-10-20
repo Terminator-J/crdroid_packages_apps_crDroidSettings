@@ -108,6 +108,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         int tileAnimationStyle = Settings.System.getIntForUser(resolver,
                 Settings.System.QS_TILE_ANIMATION_STYLE, 0, UserHandle.USER_CURRENT);
         updateAnimTileStyle(tileAnimationStyle);
+
+        boolean turboInstalled = Utils.isPackageInstalled(getContext(),
+                "com.google.android.apps.turbo");
+        mBatteryEstimate = findPreference(KEY_PREF_BATTERY_ESTIMATE);
+        if (!turboInstalled)
+            prefScreen.removePreference(mBatteryEstimate);
     }
 
     @Override
@@ -182,5 +188,19 @@ public class QuickSettings extends SettingsPreferenceFragment implements
      * For search
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.crdroid_settings_quicksettings);
+            new BaseSearchIndexProvider(R.xml.crdroid_settings_quicksettings) {
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+
+                    boolean turboInstalled = Utils.isPackageInstalled(context,
+                            "com.google.android.apps.turbo");
+
+                    if (!turboInstalled)
+                        keys.add(KEY_PREF_BATTERY_ESTIMATE);
+
+                    return keys;
+                }
+            };
 }
